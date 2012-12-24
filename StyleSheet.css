@@ -1,0 +1,33 @@
+﻿body { background-color: #182D5C;}
+
+.maindiv { height: auto; width: 1000px; margin-left: auto; margin-right: 121px; 
+margin-top: 30px; }
+
+.logodiv { height: 100px; width: 350px; background-color: White; vertical-align: top; padding-left: 20px; padding-top: 20px; font-size: xx-large; font-family: Sans-Serif;}
+.logoheader{vertical-align:top ;}
+
+.navbar {padding-top: auto; padding-bottom: auto; height: 25px; margin-top: 10px; background-color: White;border-right: 5px solid silver; border-bottom: 7px solid silver;}
+
+.dynamichoverstyle1{font-family: Segoe ui;}
+.dynamicmenuitemstyle1{font-family: segoe ui; }
+.dynamicmenustyle1{font-family: segoe ui; text-align: center; vertical-align: middle; height: 20px}
+.dynamicselectedstyle1{font-family: segoe ui;}
+.statichoverstyle1{font-family: segoe ui;}
+.staticmenuitemstyle1{font-family: segoe ui;}
+.staticmenustyle1{font-family: segoe ui; text-align: center; vertical-align: middle; height: 20px}
+.staticselectedstyle1{font-family: segoe ui;}
+
+.contentdiv {float: left; height: auto; width: 700px; margin-top:10px;  background-color: White; border-right: 5px solid silver; border-bottom: 7px solid silver;  }
+.contentdiv2 {float:left; width: 995px; height: auto; margin-top:10px;  background-color: White; border-right: 5px solid silver; border-bottom: 7px solid silver;  }
+.loginlinkdiv {float: right; margin-right: 20px; margin-left: auto; font-family: Segoe UI; font-size: small; height: auto;}
+.linkdiv {background-color: white; padding-left: 6px; padding-top: 3px; float: right; width: 270px; margin-top: 10px; margin-left: 10px; margin-right: 0px; height: auto;border-right: 5px solid silver; border-bottom: 7px solid silver;}
+
+.linkheadstyle {font-family: Sans-Serif; font-size: medium; color: Navy; font-weight: bold;}
+.linkstyle {}
+
+.heading1{padding-left: 4px; padding-top: 4px; font-family: Sans-Serif; font-weight: bold; color:#2F4F4F; font-size: x-large;}
+
+.blogpostpic {float: right; width: 200px; height: auto; margin-right: 50px; margin-top: 100px;}
+.blogpostinsert {float: left; width: 600px; height: auto; margin-left: 10px; }
+
+.resize {overflow: auto; resize: none;}

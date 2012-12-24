@@ -1,0 +1,51 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="maindiv">
+        <div class="logodiv">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                <img alt="logo" src="http://trdbnet.com/pics/logo.jpg" height="75px" width="125px" />&nbsp;&nbsp;
+                <a class="logoheader">TRDBNET<br /></a>
+            </asp:ContentPlaceHolder>
+            
+        </div>
+        <div class="navbar">
+            <div style="float: left;">
+                <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal">
+                    <DynamicHoverStyle CssClass="dynamichoverstyle1" />
+                    <DynamicMenuItemStyle CssClass="dynamicmenuitemstyle1" />
+                    <DynamicMenuStyle CssClass="dynamicmenustyle1" />
+                    <DynamicSelectedStyle CssClass="dynamicselectedstyle1" />
+                    <StaticHoverStyle CssClass="statichoverstyle1" />
+                    <StaticMenuItemStyle CssClass="staticmenuitemstyle1" />
+                    <StaticMenuStyle CssClass="staticmenustyle1" />
+                    <StaticSelectedStyle CssClass="staticselectedstyle1" />
+                </asp:Menu>
+                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False"  />
+              </div>
+              <div class="loginlinkdiv">
+                <a href="./login.aspx">Login</a>
+              </div>
+        </div>
+        <div class="contentdiv">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="linkdiv">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                <a class="linkheadstyle">Blog Links</a></asp:ContentPlaceHolder>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
