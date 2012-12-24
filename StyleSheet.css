@@ -22,12 +22,15 @@ margin-top: 30px; }
 .loginlinkdiv {float: right; margin-right: 20px; margin-left: auto; font-family: Segoe UI; font-size: small; height: auto;}
 .linkdiv {background-color: white; padding-left: 6px; padding-top: 3px; float: right; width: 270px; margin-top: 10px; margin-left: 10px; margin-right: 0px; height: auto;border-right: 5px solid silver; border-bottom: 7px solid silver;}
 
-.linkheadstyle {font-family: Sans-Serif; font-size: medium; color: Navy; font-weight: bold;}
+.linkheadstyle {font-family: segoe ui; font-size: medium; color: #2F4F4F; font-weight: bold;}
 .linkstyle {}
 
 .heading1{padding-left: 4px; padding-top: 4px; font-family: Sans-Serif; font-weight: bold; color:#2F4F4F; font-size: x-large;}
 
-.blogpostpic {float: right; width: 200px; height: auto; margin-right: 50px; margin-top: 100px;}
+.blogpostpic {float: right; width: 300px; height: auto; margin-right: 50px; margin-top: 100px;}
 .blogpostinsert {float: left; width: 600px; height: auto; margin-left: 10px; }
-
+.contentheading {margin:10px auto auto 10px; font-family: segoe ui; font-size: xx-large; color:#2F4F4F; font-weight: bold;}
 .resize {overflow: auto; resize: none;}
+
+.blogformview {margin-top: 0px; padding-top: 0px}
+.blogformview tr {font-family: Segoe ui; font-size: large; vertical-align: top;}

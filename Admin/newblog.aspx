@@ -4,37 +4,32 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
     <%If Not IsPostBack Then%>
+    <p class="contentheading">Make a new blog post</p>
     <div class="blogpostpic"> 
-        <a>Choose a picture for your blog</a> 
+        <a style="font-size: large; font-family: segoe ui;">Choose a picture for your blog</a> 
         <asp:FileUpload ID="FileUpload2" runat="server" />
     </div>
     <div class="blogpostinsert">
-    <asp:FormView ID="FormView2" runat="server" DataKeyNames="blogID" 
-            DataSourceID="SqlDataSource1" DefaultMode="Insert" 
-            RenderOuterTable="False" >
-        <InsertItemTemplate>
-            <table>
+        
+
+            <table class="blogformview">
+                <tr><td>Post Title</td><td><asp:TextBox ID="titleTextBox" runat="server" Text='<%# Bind("title") %>' Width="400px" /></td></tr>
                 
-                <tr ><td>Post Title</td><td><asp:TextBox ID="titleTextBox" runat="server" Text='<%# Bind("title") %>' Width="400px" /></td></tr>
-                <br />
                 <tr><td>Posted by</td><td><asp:TextBox ID="usernameTextBox" runat="server" Text='<%# Bind("username") %>' Width="200px" /></td></tr>
-                <br />
+                
                 <tr><td>Tag</td><td><asp:TextBox ID="tagTextBox" runat="server" Text='<%# Bind("tag") %>' Width="200px" /></td></tr>
-                <br />
-                <tr><td >Content</td><td><asp:TextBox CssClass="resize"  ID="contentTextBox" runat="server" Text='<%# Bind("content") %>' TextMode="MultiLine" Height="200px" Width="500px" Wrap="True"  /></td></tr>
-                <br />
-            
+                
+                <tr><td>Content</td><td><asp:TextBox CssClass="resize"  ID="contentTextBox" runat="server" Text='<%# Bind("content") %>' TextMode="MultiLine" Height="200px" Width="500px" Wrap="True"  /></td></tr>
+                
            </table>
+        
            <br /><br />
            <asp:Button ID="UploadButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Post Blog"  OnClick="UploadButton_Click" >
            </asp:Button>    
            <asp:Button ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
            <br />
            <asp:Label ID="UploadStatusLabel" runat="server"> </asp:Label>
-          
-        </InsertItemTemplate>
         
-    </asp:FormView>
     
         
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 

@@ -10,7 +10,7 @@ Partial Class Admin_newblog
     Inherits System.Web.UI.Page
 
 
-    Sub UploadButton_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles FormView2.ItemInserted
+    Sub UploadButton_Click(ByVal sender As Object, ByVal e As System.EventArgs)
 
         ' Specify the path on the server to
         ' save the uploaded file to
