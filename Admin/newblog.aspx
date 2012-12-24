@@ -13,7 +13,7 @@
             DataSourceID="SqlDataSource1" DefaultMode="Insert" 
             RenderOuterTable="False" >
         <InsertItemTemplate>
-            <table >
+            <table>
                 
                 <tr ><td>Post Title</td><td><asp:TextBox ID="titleTextBox" runat="server" Text='<%# Bind("title") %>' Width="400px" /></td></tr>
                 <br />
