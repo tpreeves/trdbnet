@@ -9,24 +9,30 @@
         <asp:FileUpload ID="FileUpload1" runat="server" />
     </div>
     <div class="blogpostinsert">
-        
-            <table  class="blogformview"  >
-            
-                <tr><td>Title/Tag</td><td><asp:TextBox ID="newsTagTextBox" runat="server" Text='<%# Bind("newsTag") %>' Width="300px" /></td></tr>
+        <asp:FormView ID="FormView1" runat="server" DefaultMode="Insert" 
+            DataSourceID="SqlDataSource1">
+            <InsertItemTemplate>
+             <table class="blogformview">
                 
+                <tr><td>Title/Tag</td><td><asp:TextBox ID="newsTagTextBox" runat="server" Text='<%# Bind("newsTag") %>' Width="300px" /></td></tr>
+                <tr><td>Posted By</td><td><asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("newsPoster") %>' Width="300px" /></td></tr>
                 <tr><td>Content</td><td><asp:TextBox ID="newsContentTextBox" runat="server" cssclass="resize" Text='<%# Bind("newsContent") %>' Height="200px" TextMode="MultiLine" Width="500px" /></td></tr>
                 
             </table>
             <br />
             <br />
-         <asp:Button ID="InsertButton" runat="server" CausesValidation="True" OnClick="InsertButton_Click" CommandName="Insert" Text="Post" />
+                    <asp:Button ID="InsertButton" runat="server" CausesValidation="True" OnClick="InsertButton_Click" CommandName="Insert" Text="Post" />
          &nbsp&nbsp<asp:Button ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
          
+            </InsertItemTemplate>
+        </asp:FormView>
+           
+            
          
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
             ConnectionString="<%$ ConnectionStrings:trdb1ConnectionString %>" 
             DeleteCommand="DELETE FROM [trdb_news] WHERE [newsID] = @newsID" 
-            InsertCommand="INSERT INTO [trdb_news] ([newsTag], [newsDate], [newsContent]) VALUES (@newsTag, GETDATE(), @newsContent)" 
+            InsertCommand="INSERT INTO [trdb_news] ([newsTag], [newsDate], [newsContent], [newsPoster]) VALUES (@newsTag, GETDATE(), @newsContent, @newsPoster)" 
             SelectCommand="SELECT * FROM [trdb_news]" 
             UpdateCommand="UPDATE [trdb_news] SET [newsTag] = @newsTag, [newsDate] = @newsDate, [newsContent] = @newsContent WHERE [newsID] = @newsID">
             <DeleteParameters>

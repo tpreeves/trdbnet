@@ -36,3 +36,8 @@ margin-top: 30px; }
 .blogformview tr {font-family: Segoe ui; font-size: large; vertical-align: top;}
 
 .postbacklinks {font-family: Segoe ui; font-size: large; margin-left: 20px;}
+
+.frontpagenewshead {font-size: x-large; font-weight: bold; font-family: Sans-Serif; color: Black;}
+.fpnhcontent {font-size: medium; font-family: Segoe UI; color: Black; }
+.fpnhfooter {font-size: medium; font-family: Segoe UI; color: Black; background-color: silver;  }
+.fpnhtable {margin-top: 5px}

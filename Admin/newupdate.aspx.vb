@@ -3,19 +3,21 @@ Partial Class Admin_newupdate
     Inherits System.Web.UI.Page
 
 
-    Protected Sub InsertButton_Click(ByVal sender As Object, ByVal e As System.EventArgs)
+    
+    
+    Public Sub InsertButton_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles FormView1.ItemInserted
 
-
+        Dim nametext As TextBox
         ' Specify the path on the server to
         ' save the uploaded file to
 
-
+        nametext = FormView1.FindControl("newstagTextBox")
         ' Before attempting to perform operations
         ' on the file, verify that the FileUpload 
         ' control contains a file.
         If (FileUpload1.HasFile) Then
             ' Get the name of the file to upload.
-            Dim original1 As String = newsTagTextBox.Text
+            Dim original1 As String = nametext.Text
             Dim original2 As Date = Date.Now
 
             Dim firstpart As String
@@ -45,4 +47,6 @@ Partial Class Admin_newupdate
 
         End If
     End Sub
+
+    
 End Class

@@ -11,9 +11,11 @@
     </div>
     <div class="blogpostinsert">
         
-
+        <asp:FormView ID="FormView1" DefaultMode="Insert" runat="server" 
+            DataSourceID="SqlDataSource1"  >
+            <InsertItemTemplate>
             <table class="blogformview">
-                
+
                 <tr><td>Post Title</td><td><asp:TextBox ID="titleTextBox" runat="server" Text='<%# Bind("title") %>' Width="400px" /></td></tr>
                 
                 <tr><td>Posted by</td><td><asp:TextBox ID="usernameTextBox" runat="server" Text='<%# Bind("username") %>' Width="200px" /></td></tr>
@@ -29,7 +31,8 @@
            </asp:Button>    
            <asp:Button ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
            <br />
-        
+           </InsertItemTemplate>
+         </asp:FormView>        
     
         
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
