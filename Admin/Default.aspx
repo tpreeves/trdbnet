@@ -5,8 +5,8 @@
 
 
 <asp:Content ID="Content2" runat="server" contentplaceholderid="ContentPlaceHolder2">
-    <p><a href="blogpost.aspx">New Blog Post</a></p>
-    <p><a href="newsupdate.aspx"></a></p>
+    <p class="postbacklinks"><a href="blogpost.aspx">New Blog Post</a></p>
+    <p class="postbacklinks"><a href="newupdate.aspx">New News Update</a></p>
 </asp:Content>
 
 

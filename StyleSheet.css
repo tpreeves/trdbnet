@@ -27,10 +27,12 @@ margin-top: 30px; }
 
 .heading1{padding-left: 4px; padding-top: 4px; font-family: Sans-Serif; font-weight: bold; color:#2F4F4F; font-size: x-large;}
 
-.blogpostpic {float: right; width: 300px; height: auto; margin-right: 50px; margin-top: 100px;}
+.blogpostpic {float: right; width: 300px; height: auto; margin-right: 50px; margin-top: 20px;}
 .blogpostinsert {float: left; width: 600px; height: auto; margin-left: 10px; }
 .contentheading {margin:10px auto auto 10px; font-family: segoe ui; font-size: xx-large; color:#2F4F4F; font-weight: bold;}
 .resize {overflow: auto; resize: none;}
 
 .blogformview {margin-top: 0px; padding-top: 0px}
 .blogformview tr {font-family: Segoe ui; font-size: large; vertical-align: top;}
+
+.postbacklinks {font-family: Segoe ui; font-size: large; margin-left: 20px;}

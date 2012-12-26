@@ -21,7 +21,18 @@ Partial Class Admin_newblog
         ' control contains a file.
         If (FileUpload2.HasFile) Then
             ' Get the name of the file to upload.
-            Dim fileName As String = FileUpload2.FileName
+            Dim original1 As String = titleTextBox.Text
+            Dim original2 As Date = Date.Now
+
+            Dim firstpart As String
+            Dim lastpart As String
+
+            original1 = Replace(original1, " ", "")
+
+            firstpart = Left(original1, 7)
+            lastpart = CStr(original2.Month) + CStr(original2.Year)
+
+            Dim fileName As String = lastpart + firstpart + ".jpg"
 
             ' Append the name of the file to upload to the path.
 

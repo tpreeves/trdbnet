@@ -13,6 +13,7 @@
         
 
             <table class="blogformview">
+                
                 <tr><td>Post Title</td><td><asp:TextBox ID="titleTextBox" runat="server" Text='<%# Bind("title") %>' Width="400px" /></td></tr>
                 
                 <tr><td>Posted by</td><td><asp:TextBox ID="usernameTextBox" runat="server" Text='<%# Bind("username") %>' Width="200px" /></td></tr>
@@ -28,7 +29,6 @@
            </asp:Button>    
            <asp:Button ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
            <br />
-           <asp:Label ID="UploadStatusLabel" runat="server"> </asp:Label>
         
     
         
@@ -62,7 +62,8 @@
     </div>
 
     <%ElseIf IsPostBack Then%>
-        <p>Your you have successfully posted your blog. Click <a href="../Default.aspx">here</a> to see it on the homepage.</p>
+        <p class="postbacklinks">Your you have successfully posted your blog. Click <a href="../Default.aspx">here</a> to see it on the homepage.</p>
+        <p class="postbacklinks">Click <a href="newblog.aspx">here</a> to create another blog post.</p>
     <%End If%>
 </asp:Content>
 
